@@ -6,3 +6,15 @@ $crontab -e
 # m h  dom mon dow   command
 */2 *  * * * /home/emilius/pyprojects/Ami_dialer.py
 
+$cat /etc/asterisk/manager.conf
+[pbx]
+secret=testpbx123
+;permit=127.0.0.1/255.255.255.0
+;deny = 0.0.0.0/0.0.0.0
+;permit = 10.100.100.103/255.255.255.0
+read = system,call,log,verbose,agent,user,config,dtmf,reporting,cdr,dialplan
+write = system,call,agent,user,config,command,reporting,originate
+read = all
+write = all
+
+
