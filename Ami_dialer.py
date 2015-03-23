@@ -17,11 +17,10 @@ def send_mail(subject, text):
     #msg['Subject'] = h_cause
     msg['From']='Auto Dialer'
     sender = 'e.omin@corp.mastertel.ru'
-   #recipients = ['voice@corp.mastertel.ru', 'help-support@corp.mastertel.ru']
-    recipients = ['voice@corp.mastertel.ru']
-    #recipients = ['e.omin@corp.mastertel.ru']
+   #recipients = ['voice@tel.ru', 'help@tel.ru']
+    recipients = ['voice@rtel.ru']
     msg['To']=", ".join(recipients)
-    mailSrv=smtplib.SMTP("mail.corp.mastertel.ru",25)
+    mailSrv=smtplib.SMTP("mail.tel.ru",25)
     mailSrv.ehlo()
     mailSrv.sendmail(sender, recipients, msg.as_string())
     mailSrv.close()
